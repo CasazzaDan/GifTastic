@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Create a array of strings, with the variables for "topics" to turn into buttons to display the gifs for that topic
-    var topics = ["seinfeld", "shameless", "brooklyn 99", "archer", "house of lies", "billions", "martin", "waynes brothers", "rugrats", "rocket power"];
+    var topics = ["dragonballz", "seinfeld", "shameless", "brooklyn 99", "archer", "souleater", "billions", "martin", "rugrats", "naruto"];
     
     // Fuction to add a new topic button to get new gifs
     function makeButtons() {
@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 
     // Function to listen for a button to be clicked so it can send the request to the api for the appropriate gifs 
-    $("button").on("click", function() {
+    $(document).on("click", ".gifButton", function() {
         var show = $(this).attr("data-name");
         
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=8S35sobPSipKGEYqydj4P3WQCennaqVS&&limit=10"
